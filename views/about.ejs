@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka & Jidnyasa 2K24</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <style>
+
+        @font-face {
+            font-family: 'FEASFBRG.TTF';
+            src: url('../font/FEASFBRG.TTF');
+            /* font-weight: normal;
+            font-style: normal; */
+        }
+
+        @font-face {
+            font-family: 'Abang.otf';
+            src: url('../Fonts/abang/Abang.otf');
+        }
+
+        body {
+            font-weight: 200;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        html {
+            background-image: url(/Images/dark_theme.png);
+            background-repeat: no-repeat;
+
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* NAvbar start */
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25%;
+            margin: 0;
+            background-color: #131313;
+            height: 100vh;
+            display: none;
+            z-index: 2;
+        }
+        #navitems *{
+            font-family: 'FEASFBRG.TTF';
+        }
+        #navitems {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        hr {
+            color: red;
+            margin-top: 7%;
+        }
+
+        #menu {
+            display: inline;
+            padding: 2px;
+            border-radius: 20px;
+            position: fixed;
+        }
+
+        #menu img {
+            margin: 25%;
+            padding: 25%;
+            background-color: #131313;
+            border: 2px solid #00FFFF;
+            border-radius: 20px;
+
+        }
+
+        .close-button {
+            cursor: pointer;
+            width: 20%;
+            padding: 0;
+            background-color: #131313;
+            width: 50px;
+            margin: 2%;
+        }
+
+        .close-button:hover {
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+
+        .navitem {
+            display: flex;
+            align-items: center;
+            border-top: 0.1px solid #00FFFF;
+            border-bottom: 1px solid white;
+            height: 10vh;
+            width: 100%;
+        }
+
+        .navitem:hover {
+            box-shadow: #00FFFF 2px 2px 10px;
+            font-weight: 700;
+            transform: scale(1.02);
+            transition: 0.2s;
+
+            img {
+                transform: rotateY(360deg);
+                transition: 1.5s;
+            }
+        }
+
+        .navitem a {
+            text-decoration: none;
+            font-size: 4vh;
+            color: #00FFFF;
+            margin-left: 10px;
+        }
+
+        .navimg {
+            width: 15%;
+        }
+
+        @media (max-width:600px) {
+            #navbar {
+                width: 99%;
+            }
+
+            .navimg {
+                width: 40px;
+            }
+
+            .navitem {
+                height: 9vh;
+
+            }
+
+            .navitem a {
+                font-size: 3.3vh;
+
+            }
+
+        }
+
+        /* Navbar end*/
+
+
+        
+
+        #mapbox {
+            /* border: 2px solid white; */
+           
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            margin-top: 5rem;
+            /* margin: 2rem; */
+        }
+
+        iframe {
+            width: 96%;
+            height: 70vh;
+        }
+
+        #Footer {
+            /* border: 2px solid white; */
+            margin-top: 1.2rem;
+            width: 100%;
+            height: 30vh;
+        }
+
+
+        #college {
+            /* margin: 0 auto; */
+            width: 98%;
+            /* height: 100vh; */
+            /* border: 2px solid white;  */
+            margin-top: 6rem;
+            padding-bottom: 0;
+            
+        }
+
+        .college_items {
+            /* border: 2px solid red; */
+            display: flex;
+            margin: 1rem;
+            align-items: center;
+            justify-content: center;
+            font-family: 'quivira.otf';
+        }
+
+        #item1 {
+            height: 5%;
+            font-size: 1.4rem;
+        }
+
+        #item2 {
+
+            height: 10%;
+            font-size: 2rem;
+            display: flex;
+
+
+        }
+
+        #item3 {
+            height: 10%;
+            font-size: 1.7rem;
+        }
+
+        #item4 {
+            height: 15%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        #item5 {
+            height: 10%;
+            font-size: 1.7rem;
+        }
+
+        #item6 {
+            height: 15%;
+            font-size: 1.2rem;
+        }
+
+        #item7 {
+            height: 10%;
+            font-size: 1.4rem;
+        }
+
+        .apps {
+            margin: 1rem;
+            /* border-bottom: 2px solid red; */
+        }
+
+        .apps img {
+            width: 2.5rem;
+        }
+
+        /* #social_media{
+            border-bottom: 2px solid red;
+            box-sizing: border-box;
+        } */
+        /* br{
+            margin: 5rem;
+        } */
+
+        .br_space {
+            line-height: 1.4;
+        }
+
+        #developed_by {
+            width: 100%;
+            height: 10vh;
+            background-color: #131313;
+            color: #ffffff;
+            display: flex;
+            text-align: center;
+            font-family: 'quivira.otf';
+            font-size: 1.2rem;
+            justify-content: center;
+            margin-bottom: 0;
+            /* border: 2px solid green; */
+            position: absolute;
+            left: 0;
+
+        } 
+
+
+        /* Eureka Jidnysa Start */
+
+        .box_title{
+            width: 100%;
+            height: 22vh;
+            /* border: 2px solid yellow; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box_title h1{
+            font-size: 5rem;
+        }
+
+        .box_ej{
+            width: 100%;
+            height: 80vh;
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .info p{
+            margin: 2rem;
+            font-size: 2rem;
+            display: flex;
+            text-align: center;
+            
+        }
+
+       .info{
+            width: 60%;
+            height: 100%;
+            /* border: 2px solid white; */
+            display: flex;
+            align-items: center;
+        }
+
+        .pic{
+            width: 40%;
+            height: 100%;
+            /* border: 2px solid white; */
+            
+        }
+
+
+
+        #developer_container{
+        width: 100%;
+        height: 50vh;
+        /* border: 2px solid green; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* justify-content: center; */
+        margin-bottom: 3rem;
+    }
+    .developer_circle{
+        width: 18rem;
+        height: 18rem;
+        border: 2px solid #00FFFF;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .developer_circle img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .developer_name{
+        margin-top: 1rem;
+      /* border: 2px solid white; */
+        /* columns: white; */
+        font-size: 1.4rem;
+        text-align: center;
+        font-family: 'quivira.otf';
+    }
+
+    #developer_title{
+        width: 100%;
+        height: 15%;
+        font-size: 4rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        font-family: 'quivira.otf';
+    }
+
+    .both_developer:hover {
+        background-color: #131313;
+        border-radius: 1rem;
+    }
+
+
+    @media (max-width:600px) {
+        .box_title h1{
+            font-size: 2.4rem;
+        }
+
+        .box_title{
+            height: 10vh;
+        }
+        
+        /* #container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;  
+        } */
+
+        .box_ej{
+            display: flex;
+            flex-direction: column;
+            /* text-overflow: hidden; */
+            height: auto;
+            width: auto;
+        }
+        .box_ej img{
+            width: 350px;
+        }
+
+        #developer_container{ 
+                display: flex;
+                flex-direction: column;
+                }
+
+        .info{
+            width: 100%;
+            
+                }
+
+        .info p{
+            font-size: 0.9rem;
+            
+            margin: 2px;
+        }
+
+        #jid{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        /* #mapbox {
+            width: 90%;
+            height: 50vh;
+        } */
+                
+        #developer_container{
+            height: auto;
+        }
+
+        #developer_title{
+            font-size: 2.2rem;
+        }
+
+        .developer_name{
+            font-size: 1rem;
+        }
+
+        #item1 {
+            height: 5%;
+            font-size: 1rem;
+        }
+
+        #item2 {
+
+            height: 10%;
+            font-size: 1.2rem;
+            display: flex;
+            text-align: center;
+
+        }
+
+        #item3 {
+            height: 10%;
+            font-size: 1.1rem;
+        }
+
+        #item4 {
+            height: 15%;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        #item5 {
+            height: 10%;
+            font-size: 1.1rem;
+        }
+
+        #item6 {
+            height: 15%;
+            font-size: 1rem;
+        }
+
+        #item7 {
+            height: 10%;
+            font-size: 1rem;
+        }
+
+        #developed_by p{
+            font-size: 0.8rem;
+            /* margin-bottom: 0; */
+        }
+
+        #developed_by{
+            height: auto;
+           
+        }
+
+
+
+            }
+
+    #item7> a{
+        color: white;
+        text-decoration: none;
+    }
+
+    
+
+
+    /* Developr Section end */
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <nav id="navbar" style="z-index: 1000;">
+        <ul id="navitems">
+            <label for="closeButton">
+                <div class="close-button" id="closeButton"><img src="./Images/closebtn.png" alt="" width="50px"></div>
+            </label>
+            <div id="navitem1" class="navitem">
+                <img src="./Images/home.png" alt="homeimg" class="navimg">
+                <li><a href="/" class="a">Home</a></li>
+            </div>
+            <div id="navitem2" class="navitem">
+                <img src="./Images/calendar.png" alt="" class="navimg">
+                <li><a href="/event" class="a">Events</a></li>
+            </div>
+            <div id="navitem2" class="navitem">
+                <img src="./Images/information.png" alt="" class="navimg">
+                <li><a href="/about" class="a">About Us</a></li>
+            </div>
+            <div id="navitem4" class="navitem">
+                <img src="./Images/gallery.png" class="navimg">
+                <li><a href="/gallery" class="a">Gallery</a></li>
+            </div>
+            <div id="navitem5" class="navitem">
+                <img src="./Images/register.png" alt="" class="navimg">
+                <li><a href="/register" class="a" target="_blank">Register</a></li>
+            </div>
+            <div>
+                <li><a href="" id="navitem6" class="a"></a></li>
+            </div>
+        </ul>
+    </nav>
+    <div id="menu">
+        <img src="./Images/list.png" alt="Imgae">
+    </div>
+
+    <div id="container">
+        
+
+    <div class="box_title">
+        <h1>EUREKA</h1>
+    </div>
+
+    <div class="box_ej">
+        <div class="pic" >
+           <img src="/Images/paper_presentation.png" alt="">
+        </div>
+
+        <div class="info">
+            <p>Eureka, a prestigious paper presentation competition, fosters innovation and excellence in research and communication. Participants delve into diverse topics, presenting insightful papers and engaging presentations. It's a platform for showcasing intellect, creativity, and scholarly achievements.</p>
+        </div>
+    </div>
+
+
+    <div class="box_title">
+        <h1>JIDNYASA</h1>
+    </div>
+
+    <div class="box_ej" id="jid">
+ 
+        <div class="info">
+            <p>Jidnyasa is a project competition where teams compete by presenting their innovative projects. It fosters creativity, problem-solving, and teamwork, offering participants an opportunity to showcase their practical skills and solutions to real-world challenges.</p>
+
+        </div>
+
+         <div class="pic" >
+            <img src="/Images/project_compitation.png" alt="">
+         </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+        <div id="mapbox">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.400382868578!2d74.19697017093353!3d16.8560771711619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1a80a7c8a6b7b%3A0x2a6e33b9af5d4171!2sTatyasaheb%20Kore%20Institute%20of%20Engineering%20%26%20Technology%20(An%20Autonomous%20Institute)!5e0!3m2!1sen!2sin!4v1702292217657!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        
+    <div id="developer_title">
+        Developers:
+    </div>
+
+
+
+        <div id="developer_container">
+            <div class="both_developer">
+                <div class="developer_circle">
+                  <a href="https://www.linkedin.com/in/ritesh-bongarde-16575a236/">  <img src="./Images/ritesh_bongarde.jpg" alt="ritesh_photo"> </a>
+                </div>
+                <div class="developer_name">RITESH BONGARDE</div>
+            </div>
+
+            <div class="developer_name"></div>
+
+            <div class="both_developer">
+                <div class="developer_circle">
+                   <a href="https://www.linkedin.com/in/pratik-patil-a56000209/"> <img src="./Images/pratik_patil.jpg" alt="pratik_photo"></a>
+                </div>
+                <div class="developer_name">PRATIK PATIL</div>
+            </div>
+        </div>
+    
+
+
+        <footer id="college">
+            <div class="college_items" id="item1">Shree Warana Vibhag Shikshan Mandal's</div>
+            <div class="college_items" id="item2">TATYASAHEB KORE INSTITUTE OF ENGINEERING AND TECHNOLOGY</div>
+            <div class="college_items" id="item3">ADDRESS</div>
+            <div class="college_items br_space " id="item4">TKIET Warana<br>Warananagar, Tal.
+                Panhala<br>Dist.Kolhapur-416113 </div>
+            <div class="college_items" id="item5">CONTACT INFO</div>
+            <div class="college_items br_space" id="item6">Convenor : Mr. Sumay Magdum 9132331115
+            </div>
+            <div class="college_items" id="item7"><a href="">TKIET official Website</a></div>
+            <div class="college_items" id="social_media">
+                <div class="apps" id="linkdin"><a href="https://www.linkedin.com/school/tatyasaheb-kore-institute-of-engineering-&-technology-warananagar/" target="_blank"><img src="./Images/linkedin.png" alt="linkdin"></a></div>
+                <div class="apps" id="insta"><a href="https://www.instagram.com/tkiet__official?igsh=eTk4MXM0d3hhZXA5" target="_blank"><img src="./Images/instagram.png" alt="insta"></div>
+                <div class="apps" id="facebook"></a><a href="https://www.facebook.com/groups/TKIETWarnanagar/?ref=share&mibextid=NSMWBT" target="_blank"><img src="./Images/facebook.png" alt="facbook"></a></div>
+            </div>
+        </footer>
+
+
+        <footer id="developed_by">
+            <p>© 2024 TKIET CSE Student . All Rights Reserved. Designed &amp; Developed with ♥ by <a href="https://www.linkedin.com/in/ritesh-bongarde-16575a236/" style="color:white"> Ritesh Bongarde</a> &amp; <a href="https://www.linkedin.com/in/pratik-patil-a56000209/" style="color:white">Pratik Patil</a></p>
+        </footer>
+
+    </div>
+
+
+
+    <!-- JAVA SCRIPT -->
+    <!-- Navbar -->
+    <script>
+        // Get references to the navbar, menu, and close button elements
+        const navbar = document.getElementById('navbar');
+        const menu = document.getElementById('menu');
+        const closeButton = document.getElementById('closeButton');
+
+        // Function to toggle navbar visibility
+        function toggleNavbar() {
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+                navbar.
+                    menu.style.display = 'none';
+            } else {
+                navbar.style.display = 'none';
+                menu.style.display = 'block';
+            }
+        }
+
+        // Add an event listener to the menu to toggle navbar visibility
+        menu.addEventListener('click', toggleNavbar);
+
+        // Add an event listener to the close button to hide the navbar
+        closeButton.addEventListener('click', toggleNavbar);
+
+
+        // Code for Navigation bar click
+
+            const navItems = document.querySelectorAll('.navitem');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    const link = this.querySelector('a');
+
+                    if (link) {
+                        event.preventDefault();
+                        
+                        const href = link.getAttribute('href');
+                        
+                        window.location.href = href;
+                    }
+                });
+            });
+
+    </script>
+
+</body>
+
+</html>

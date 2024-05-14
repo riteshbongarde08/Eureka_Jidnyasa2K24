@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka & Jidnyasa 2K24</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        
+        @font-face { 
+            font-family: 'FEASFBRG.TTF';
+            src: url('../font/FEASFBRG.TTF');
+            /* font-weight: normal;
+            font-style: normal; */
+        }
+
+        @font-face {
+            font-family: 'Abang.otf';
+            src: url('../Fonts/abang/Abang.otf');
+        }
+
+
+        .reveal {
+            opacity: 0;
+        }
+
+        .reveal.active {
+           
+            opacity: 1;
+            transition: all 3s ease;
+
+        }
+
+
+        .model {
+            opacity: 1;
+            transition:  0.3s ease-in-out;
+        }
+
+       
+
+        
+
+        /* Add the following styles to make the content gradually disappear on scroll */
+        .fade-out {
+            opacity: 0;
+        }
+
+
+
+
+        body {
+            /* font-family: cursive; */
+            font-weight: 200;
+            color: white;
+            /* width: 100vw;
+            height: 100vh; */
+
+        }
+
+        html {
+            background-image: url(./Images/dark_theme.png);
+            background-repeat: no-repeat;
+
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* NAvbar start */
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25%;
+            margin: 0;
+            background-color: #131313;
+            height: 100vh;
+            display: none;
+            z-index: 11;
+        }
+
+        #navitems {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        hr {
+            color: red;
+            margin-top: 7%;
+        }
+
+        #menu {
+            display: inline;
+            padding: 2px;
+            border-radius: 20px;
+            position: fixed;
+            z-index: 50;
+        }
+
+        #menu img {
+            margin: 25%;
+            padding: 25%;
+            background-color: #131313;
+            border: 2px solid #00FFFF;
+            border-radius: 20px;
+
+        }
+
+        .close-button {
+            cursor: pointer;
+            width: 20%;
+            padding: 0;
+            background-color: #131313;
+            width: 50px;
+            margin: 2%;
+        }
+
+        .close-button:hover {
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+
+        .navitem {
+            display: flex;
+            align-items: center;
+            border-top: 0.1px solid white;
+            border-bottom: 1px solid white;
+            height: 10vh;
+            width: 100%;
+        }
+
+        .navitem:hover {
+            box-shadow: #00FFFF 2px 2px 10px;
+            font-weight: 700;
+            transform: scale(1.02);
+            transition: 0.2s;
+
+            img {
+                transform: rotateY(360deg);
+                transition: 1.5s;
+            }
+        }
+
+        .navitem a {
+            text-decoration: none;
+            font-size: 4vh;
+            color: #00FFFF;
+            margin-left: 10px;
+        }
+
+        .navimg {
+            width: 15%;
+        }
+
+        @media (max-width:600px) {
+            #navbar {
+                width: 99%;
+            }
+
+            .navimg {
+                width: 40px;
+            }
+
+            .navitem {
+                height: 9vh;
+
+            }
+
+            .navitem a {
+                font-size: 3.3vh;
+
+            }
+
+        }
+
+        /* Navbar end*/
+
+        #circle {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #modelContainer {
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+            /* Move the video behind other elements */
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Abang.otf';
+        }
+
+        /* #modelContainer img{
+             height: 75%; 
+            
+        } */
+
+        .model{
+      position: absolute;
+                }
+
+    #model2,#model4 ,#model5, #model0{
+        animation: rotate 4s linear infinite;
+    }
+
+    #model001, #model3{
+        animation: rotateReverse 4s linear infinite;
+    }
+        
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+     transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#model001{
+    position: absolute;
+    z-index: +02;
+    scale: -40%;
+}
+
+
+#model0{
+    position: absolute;
+    z-index: +03;
+}
+
+
+
+        #projectTitle{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            font-size: 5em;
+            color:white;
+            font-weight: 700; 
+            font-family: 'Abang.otf';
+            display: inline-block;
+            margin: 0 auto;
+            text-shadow: 3px 3px 5px #00ffff;
+        }
+
+        /* Circle */
+        #as_container {
+            width: 100%;
+            height: 50vh;
+            /* border: 2px solid red; */
+            display: flex;
+
+        }
+
+        #about_container {
+            width: 100%;
+            height: 80vh;
+            /* border: 2px solid yellow; */
+        }
+
+        #circle_container {
+            width: 34%;
+            height: 80vh;
+            /* border: 2px solid green; */
+        }
+
+        #about_info{
+            font-size: 2rem;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #00ffff;
+            /* Border color */
+            border-radius: 50%;
+            /* Make it a circle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            /* Adjust font size */
+            color: #ffffff;
+            /* Text color */
+            margin: 1rem;
+            box-shadow: 10px 10px 10px #00FFFF,-10px -10px 10px #00FFFF;
+
+        }
+
+        /* #circle_container{
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    } */
+
+        #circle1 {
+            position: absolute;
+            right: 3rem;
+            top: 40rem;
+        }
+
+        #circle2 {
+            position: absolute;
+            right: 9rem;
+            top: 44rem;
+        }
+
+        #circle3 {
+            position: absolute;
+            right: 3em;
+            top: 50rem;
+        }
+
+        #about_title {
+            font-family: 'Abang.otf';
+            font-size: 5rem;
+            margin-left: 2rem;
+        }
+
+        #about_info {
+            /* border: 2px solid violet; */
+            width: 100%;
+            height: 86%;
+            padding-left: 12%;
+            padding-top: 4%;
+            box-sizing: border-box;
+            font-family: 'quivira.otf';
+        }
+
+        #title_view{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 20vh;
+            /* border: 2px solid red; */
+            font-family: 'Abang.otf';
+            font-size: 4rem;
+        }
+        #view_event{
+            display: flex;
+            flex-wrap: wrap;
+            width: 94%;
+            /* border: 2px solid red; */
+            border-radius: 1.5rem;
+            background-color: rgba(3, 4, 94,0.7);
+            margin: 0 auto;     
+            justify-content: space-between;
+            padding: 2.5rem 0;       
+        }
+        .all_event{
+            width: 28%;
+            height: 30vh; 
+            /* border: 2px solid white; */
+            border-radius: 1rem;
+            margin: 1rem;
+            background-color: #1a1e26;
+            text-align: center;
+        }
+
+        .all_event_title{
+            font-size: 1.8rem;
+        }
+
+        
+        #developed_by {
+            width: 100%;
+            height: auto;
+            background-color: #131313;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            font-family: 'quivira.otf';
+            font-size: 1.2rem;
+            justify-content: center;
+            margin-bottom: 0;
+            /* border: 2px solid green; */
+            position: absolute;
+            left: 0;
+
+        }
+      
+        #Footer {
+            /* border: 2px solid white; */
+            margin-top: 1.2rem;
+            width: 100%;
+            height: 30vh;
+        }
+
+
+        #college {
+            /* margin: 0 auto; */
+            width: 98%;
+            /* height: 100vh; */
+            /* border: 2px solid white;  */
+            margin-top: 6rem;
+            padding-bottom: 0;
+            
+        }
+
+        .college_items {
+            /* border: 2px solid red; */
+            display: flex;
+            margin: 1rem;
+            align-items: center;
+            justify-content: center;
+            font-family: 'quivira.otf';
+        }
+
+        #item1 {
+            height: 5%;
+            font-size: 1.4rem;
+        }
+
+        #item2 {
+
+            height: 10%;
+            font-size: 2rem;
+            display: flex;
+
+
+        }
+
+        #item3 {
+            height: 10%;
+            font-size: 1.7rem;
+        }
+
+        #item4 {
+            height: 15%;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        #item5 {
+            height: 10%;
+            font-size: 1.7rem;
+        }
+
+        #item6 {
+            height: 15%;
+            font-size: 1.2rem;
+        }
+
+        #item7 {
+            height: 10%;
+            font-size: 1.4rem;
+        }
+
+        .apps {
+            margin: 1rem;
+            /* border-bottom: 2px solid red; */
+        }
+
+        .apps img {
+            width: 2.5rem;
+        }
+
+
+        @media (max-width:600px) {
+      
+                
+        #developer_container{
+            height: auto;
+        }
+
+        #developer_title{
+            font-size: 2.2rem;
+        }
+
+        .developer_name{
+            font-size: 1rem;
+        }
+
+        #item1 {
+            height: 5%;
+            font-size: 1rem;
+        }
+
+        #item2 {
+
+            height: 10%;
+            font-size: 1.2rem;
+            display: flex;
+            text-align: center;
+
+        }
+
+        #item3 {
+            height: 10%;
+            font-size: 1.1rem;
+        }
+
+        #item4 {
+            height: 15%;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        #item5 {
+            height: 10%;
+            font-size: 1.1rem;
+        }
+
+        #item6  {
+            height: 15%;
+            font-size: 1rem;
+        }
+
+        #item66{
+            height: 15%;
+            font-size: 1rem;
+        }
+
+        #item7 {
+            height: 10%;
+            font-size: 1rem;
+        }
+
+        #developed_by p{
+            font-size: 0.8rem;
+            /* margin-bottom: 0; */
+            text-align: center;
+        }
+
+        #developed_by{
+            height: auto;
+           
+        }
+        
+
+     }
+
+
+
+       
+        .br_space{
+            line-height: 1.4;
+        }
+
+        /* Countdown start */
+        .countdown_container {
+      display: flex;
+      justify-content: space-evenly;
+      /* border: 2px solid green; */
+      align-items: center;
+      /* background-color: #00FFFF; */
+    }
+
+    .countdown_item{
+      text-align: center;
+      /* border: 2px solid red; */
+      /* border-radius: 50%; */
+      width: 10rem;
+      height: 10rem;
+      font-family: 'quivira.otf';
+
+    }
+
+    .countdown_number {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .countdown_label {
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+        /* Countdown end */
+
+    .coming_soon{
+        width: 100%;
+        height: 15%;
+        font-size: 4.5rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        font-family: 'quivira.otf';
+    }
+
+
+    #developer_container{
+        width: 100%;
+        height: 50vh;
+        /* border: 2px solid green; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* justify-content: center; */
+        margin-bottom: 3rem;
+    }
+    .developer_circle{
+        width: 16rem;
+        height: 16rem;
+        border: 2px solid #00FFFF;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .developer_circle img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .developer_name{
+        margin-top: 1rem;
+      /* border: 2px solid white; */
+        /* columns: white; */
+        font-size: 1.2rem;
+        text-align: center;
+        font-family: 'quivira.otf';
+    }
+
+    #developer_title{
+        width: 100%;
+        height: 15%;
+        font-size: 3rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        font-family: 'quivira.otf';
+    }
+
+    
+#about_info {
+    /* border: 2px solid violet; */
+    width: 100%;
+    height: 86%;
+    padding-left: 12%;
+    padding-top: 4%;
+    box-sizing: border-box;
+    font-family: 'quivira.otf';
+
+}
+
+#title_view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    /* border: 2px solid red; */
+    font-family: 'Abang.otf';
+    font-size: 4rem;
+}
+#view_event{
+    font-family: 'quivira.otf';
+    display: flex;
+    flex-wrap: wrap;
+    width: 94%;
+    /* border: 2px solid red; */
+    border-radius: 1.5rem;
+    background-color: #383838;
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    z-index: -1;;
+    margin: 0 auto;     
+    justify-content: space-between;
+    padding: 2.5rem 0;       
+}
+.all_event{
+    
+    width: 28%;
+    height: 30vh; 
+    /* border: 2px solid white; */
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: #191c24;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftimg{
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}
+
+.leftimg img{
+    width: 15rem;
+}
+
+
+
+/* arrow Animation */
+  .arr img{
+        width: 100px;
+        height: 70px;
+    }
+    .img1{
+        animation: anim 1s linear infinite;
+        animation-delay: 0.5s;
+    }
+    .img2{
+        animation: anim 1s linear infinite;
+        animation-delay: 0.2s;
+    }
+    .img3{
+        animation: anim 1s linear infinite;
+        animation-delay: 0s;
+    }
+   
+    /* @keyframes anim{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }  */
+
+    @keyframes anim {
+        0%{
+            opacity: 1;
+        }
+
+        50%{
+            opacity: 0.5;
+        } 100% {
+            opacity: 0;
+        }
+    }
+
+    .scroll{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left:5% ;
+        bottom: 0;
+        width: 90%;
+        transform: rotateX(180deg);
+    }
+
+    /* Prizes Start */
+    .containerPrize {
+            perspective: 800px;
+            perspective-origin: 50% 50%;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .boxPrize {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: rotateBox 5s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#00FFFF,black);
+            /* border: 2px solid #007bff; */
+            transform-origin: center center;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+        }
+
+        .face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+        .face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
+        .face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
+        .face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); }
+
+        @keyframes rotateBox {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        .rotatebox{
+            display: flex;
+            justify-content: space-evenly;
+            /* border: 2px solid red; */
+            width: 80%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+
+        }
+
+        .rotatebox p{
+            font-size:3rem;
+                 }
+
+        .boxPrize{
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+            text-align: center;
+   
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+        .boxPrize *{
+            font-size: 2.4rem;
+            /* padding-top: 4rem; */
+        }
+    z-index
+
+        #modelContainer{
+                position: sticky;
+        }
+
+        .scroll,.leftimg{
+            position: fixed;
+            pointer-events: none;
+        }
+
+        .firstpimg{
+            background-size: cover;
+            width: 200px;
+        }
+        /* Prizes end */
+
+        @media (max-width :768px){
+            #projectTitle{
+                font-size: 2rem;
+                margin-top: 5rem;
+            }
+
+            #modelContainer {
+                position: absolute;
+                top: 30%;
+               height: 50vh;
+               position: sticky;
+            }
+            .model{
+
+                width: 80%;
+                
+            }
+        
+            .leftimg{
+                display: none;
+            }
+            
+            .scroll{
+                height: auto;
+                bottom: 0%;
+                position: fixed;
+                overflow: hidden;
+            }
+            
+            .fade-out {
+            opacity: 0;
+        }
+
+        #as_container{
+            margin-top: 55vh;
+        }
+
+        #as_container{
+            height: 40vh;
+        }
+        #about_title{
+            font-size: 2.5rem;
+            text-align: center ;
+            margin: 0;
+            padding: auto;
+        }
+        #about_info{
+            font-size: 1.1rem;
+            padding: 3%;
+            height: auto;
+        }
+
+        #view_event{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .all_event{
+            width: auto;
+        }
+
+        .coming_soon{
+            font-size: 2.4rem;
+        }
+
+        .countdown_item *{
+            font-size: 1rem;
+        }
+
+        .countdown_item {
+            height: auto;
+        }
+        .rotatebox{
+            justify-content:flex-start;
+        }
+
+        .scroll img{
+                width: 70px;
+                height: 55px;
+        }
+
+        }
+
+        .containerPrize{
+            margin: 50px auto;
+        } 
+       .Prizetitle{
+        text-align: center;
+        font-size: 3rem;
+       }
+
+       /* Preloader start */
+
+       #preloader{
+        background: #000 url(/Images/preloader.gif);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 1001;
+        margin: 0 auto;
+        /* margin-left: 3rem; */
+       }
+
+       .bio {
+  text-align: center;
+  max-width: 87%;
+  /* height: 80vh; */
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 2rem;
+  /* border: 2px solid red; */
+}
+.bio p {
+  background-color: white;
+  color: black;
+  display:inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  white-space: nowrap;
+}
+.text-moving0 {
+  animation: moveText linear 4s  forwards ;
+}
+
+.text-moving {
+  animation: moveText linear 4s 1s forwards ;
+}
+.text-moving2 {
+  animation: moveText linear 4s 1.5s forwards ;  
+}
+.text-moving3 {
+  animation: moveText linear 4s 2s forwards ;  
+}
+
+@keyframes moveText {
+	from { transform: translateX(100%); }
+	to { transform: translateX(-2%); }
+}
+
+@media (max-width:600px){
+    .bio p{
+        font-size: 12px;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+
+    </div>
+
+    <nav id="navbar" style="z-index: 1000;">
+        <ul id="navitems">
+            <label for="closeButton">
+                <div class="close-button" id="closeButton"><img src="./Images/closebtn.png" alt="" width="50px"></div>
+            </label>
+            <div id="navitem1" class="navitem">
+                <img src="./Images/home.png" alt="homeimg" class="navimg">
+                <li><a href="/" class="a">Home</a></li>
+            </div>
+            <div id="navitem2" class="navitem">
+                <img src="./Images/calendar.png" alt="" class="navimg">
+                <li><a href="/event" class="a">Events</a></li>
+            </div>
+            <div id="navitem2" class="navitem">
+                <img src="./Images/information.png" alt="" class="navimg">
+                <li><a href="/about" class="a">About Us</a></li>
+            </div>
+            <div id="navitem4" class="navitem">
+                <img src="./Images/gallery.png" class="navimg">
+                <li><a href="/gallery" class="a">Gallery</a></li>
+            </div>
+            <div id="navitem5" class="navitem">
+                <img src="./Images/register.png" alt="" class="navimg">
+                <li><a href="/register" class="a" target="_blank">Register</a></li>
+            </div>
+            <div>
+                <li><a href="" id="navitem6" class="a"></a></li>
+            </div>
+        </ul>
+    </nav>
+    <div id="menu">
+        <img src="./Images/list.png" alt="Imgae">
+    </div>
+    
+    <div id="projectTitle"> Eureka & Jidnyasa</div>
+
+    <div id="modelContainer" >
+
+        <img src="images/assets/asset 11.png" id="model0" class="model">
+        <img src="images/assets/asset 12.png" id="model001" class="model">
+       <img src="images/assets/asset 16.png" id="model1" class="model">
+       <img src="images/assets/asset 8.png" id="model2" class="model">
+       <img src="images/assets/asset 9.png" id="model3" class="model">
+       <img src="images/assets/asset 12.png" id="model4" class="model">
+       <img src="images/assets/asset 10.png" id="model5" class="model">
+        
+    </div>
+     <div class="leftimg ">
+        <img src="images/assets/asset 14.png" alt="">
+     </div>
+
+
+     <div class="scroll ">
+        <div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img1">
+        </div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img2">
+        </div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img3">
+        </div> 
+    </div>
+    <div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img1">
+        </div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img2">
+        </div>
+        <div class="arr">
+            <img src="images/assets/asset 13.png" alt="" class="img3">
+        </div>
+    </div>
+     </div>
+    <div id="as_container" class="reveal">
+
+        <div id="about_container">
+            <div id="about_title" class="reveal">
+                ABOUT
+            </div>
+            <div id="about_info" class="reveal">
+                TKIET Engineering Students organized events to foster creativity, technology exploration, and learning. Driven by dedication and a passion for problem-solving, we strive to make a significant impact in the realm of technology. Our initiatives are geared towards empowering individuals with knowledge and skills to tackle real-world challenges and contribute meaningfully to society.
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+    <!-- Prizes Box -->
+     
+    <h1  class="Prizetitle">Prizes</h1>
+           
+    <div class="rotatebox reveal">
+        <div class="containerPrize">
+            <div class="boxPrize">
+                <div class="face"><img src="./Images/1.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>3000</p></div>
+                <div class="face"><img src="./Images/1.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>3000</p></div>
+            </div>
+        </div>
+        <div class="containerPrize">
+            <div class="boxPrize">
+                <div class="face"><img src="./Images/2.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>2000</p></div>
+                <div class="face"><img src="./Images/2.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>2000</p></div>
+            </div>
+        </div>
+        <div class="containerPrize">
+            <div class="boxPrize">
+                <div class="face"><img src="./Images/3.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>1000</p></div>
+                <div class="face"><img src="./Images/3.png" alt="" class="firstpimg" ></div>
+                <div class="face"><p>1000</p></div>
+            </div>
+        </div>
+    </div>
+     
+
+
+   
+    <div class="coming_soon">
+        Coming Soon..
+    </div>
+
+    <div class="countdown_container reveal">
+        <div class="countdown_item">
+          <div class="countdown_number" id="days">00</div>
+          <div class="countdown_label">DAYS</div>
+        </div>
+        <div class="countdown_item">
+          <div class="countdown_number" id="hours">00</div>
+          <div class="countdown_label">HOURS</div>
+        </div>
+        <div class="countdown_item">
+          <div class="countdown_number" id="minutes">00</div>
+          <div class="countdown_label">MINUTES</div>
+        </div>
+        <div class="countdown_item">
+            <div class="countdown_number" id="seconds">00</div>
+            <div class="countdown_label">SECONDS</div>
+          </div>
+      </div>
+ 
+
+      <div class="bio">
+        <p class="text-moving" style="color: red; display: block; background-color: rgba(255,255,255,0.5)">Some Important Dates:</p>
+        <p class="text-moving">Event held on: 20<sup>th</sup>April 2024</p>
+      <p class="text-moving2">Paper submission 15<sup>th</sup>April 2024</p>
+      <p class="text-moving3">Paper acceptance 18<sup>th</sup>April 2024</p>
+      </div>
+
+
+      <div id="title_view" class="">EVENTS</div>
+
+      <div id="view_event" style="z-index: 10;">
+          <div class="all_event">
+              <div class="all_event_title">SOFTCOM</div>
+              <div class="all_event_department">Computer Science</div>
+          </div>
+          <div class="all_event ">
+              <div class="all_event_title">PROSPECTOMECH</div>
+              <div class="all_event_department">Mechanical Engineering</div>
+          </div>
+          <div class="all_event ">
+              <div class="all_event_title">TECHNOCUBS</div>
+              <div class="all_event_department">First Year</div>
+          </div>
+          <div class="all_event">
+              <div class="all_event_title">CONSTROFEST</div>
+              <div class="all_event_department">Civil Engineering</div>
+          </div>
+          <div class="all_event">
+              <div class="all_event_title">SPECTRUM</div>
+              <div class="all_event_department">E & TC</div>
+          </div>
+          <div class="all_event ">
+              <div class="all_event_title">VISIOCHEM</div>
+              <div class="all_event_department">Chemical Engineering</div>
+          </div>
+        </a>
+      </div>
+
+   
+
+      <footer id="college" class="reveal">
+        <div class="college_items" id="item1">Shree Warana Vibhag Shikshan Mandal's</div>
+        <div class="college_items" id="item2">TATYASAHEB KORE INSTITUTE OF ENGINEERING AND TECHNOLOGY</div>
+        <div class="college_items" id="item3">ADDRESS</div>
+        <div class="college_items br_space " id="item4">TKIET Warana<br>Warananagar, Tal.
+            Panhala<br>Dist.Kolhapur-416113 </div>
+        <div class="college_items" id="item5">CONTACT INFO</div>
+        <div class="college_items br_space" id="item6">Convenor : Mr. Sumay Magdum 9132331115
+        </div>
+        
+        <div class="college_items" id="item7"><a href="">TKIET official Website</a></div>
+        <div class="college_items" id="social_media">
+            <div class="apps" id="linkdin"><a href="https://www.linkedin.com/school/tatyasaheb-kore-institute-of-engineering-&-technology-warananagar/" target="_blank"><img src="./Images/linkedin.png" alt="linkdin"></a></div>
+            <div class="apps" id="insta"><a href="https://www.instagram.com/tkiet__official?igsh=eTk4MXM0d3hhZXA5" target="_blank"><img src="./Images/instagram.png" alt="insta"></a></div>
+            <div class="apps" id="facebook"><a href="https://www.facebook.com/groups/TKIETWarnanagar/?ref=share&mibextid=NSMWBT" target="_blank"><img src="./Images/facebook.png" alt="facbook" ></a></div>
+        </div>
+    </footer>
+
+    <footer id="developed_by">
+        <p>© 2024 TKIET CSE Student . All Rights Reserved. Designed &amp; Developed with ♥ by <a href="https://www.linkedin.com/in/ritesh-bongarde-16575a236/" style="color:white; text-decoration: underline;"> Ritesh Bongarde</a> &amp; <a href="https://www.linkedin.com/in/pratik-patil-a56000209/" style="color:white; text-decoration: underline;   ">Pratik Patil</a></p>
+    </footer>
+
+
+
+
+
+    <script>
+
+        // Countdown start
+            
+    // Set the date to countdown to (replace with your target date)
+    const targetDate = new Date('2024-04-20T00:00:00').getTime();
+
+    function updateCountdown() {
+      const currentDate = new Date().getTime();
+      const timeDifference = targetDate - currentDate;
+
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference %(1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+      document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    setInterval(updateCountdown, 1000);     
+    updateCountdown(); 
+
+
+
+        
+        const navbar = document.getElementById('navbar');
+        const menu = document.getElementById('menu');
+        const closeButton = document.getElementById('closeButton');
+
+        function toggleNavbar() {
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+                navbar.
+                    menu.style.display = 'none';
+            } else {
+                navbar.style.display = 'none';
+                menu.style.display = 'block';
+            }
+        }
+
+        menu.addEventListener('click', toggleNavbar);
+
+        // Add an event listener to the close button to hide the 
+        closeButton.addEventListener('click', toggleNavbar);
+
+
+        //Item reveal 
+        
+        // Add an event listener to the menu to toggle navbar visibility
+        menu.addEventListener('click', toggleNavbar);
+
+// Add an event listener to the close button to hide the navbar
+closeButton.addEventListener('click', toggleNavbar);
+
+
+// Reveal Element
+window.addEventListener('scroll', reveal)
+
+function reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 1;
+
+        if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add('active');
+
+        }
+        else {
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+
+
+
+    function updateOpacity() {
+        var scrollPosition = window.scrollY;
+        var opacity = 1 - (scrollPosition / 500);
+
+        document.getElementById('modelContainer').style.opacity = opacity;
+        document.querySelector('.leftimg').style.opacity=opacity;
+        document.querySelector('.scroll').style.opacity=opacity;
+        console.log(scrollPosition);
+    }
+
+    // Initial call to set the initial state
+    updateOpacity();
+
+    // Listen to both scroll and touchmove events for better mobile compatibility
+    window.addEventListener('scroll', updateOpacity);
+    window.addEventListener('touchmove', updateOpacity);
+    
+
+
+    //Anchor 
+    document.addEventListener('DOMContentLoaded', function() {
+    const viewEvent = document.getElementById('view_event');
+    
+    // Add a click event listener to the view_event element
+    viewEvent.addEventListener('click', function() {
+        // Redirect to the even.html page
+        window.location.href = '/event';
+    });
+});
+
+
+document.querySelector(".all_event").addEventListener("click",()=>{
+    window.location.href="./event";
+});
+
+// Prelaoder Start
+    var loader=document.getElementById("preloader");
+    window.addEventListener('load',function(){
+        loader.style.display="none";
+    })
+// preloader End
+// Code for Navigation bar click
+
+        const navItems = document.querySelectorAll('.navitem');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                const link = this.querySelector('a');
+
+                if (link) {
+                    event.preventDefault();
+                    
+                    const href = link.getAttribute('href');
+                    
+                    window.location.href = href;
+                }
+            });
+        });
+
+</script>
+</body>
+</html>
+
+
+</body>
+
+</html>

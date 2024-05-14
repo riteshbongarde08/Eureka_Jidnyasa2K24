@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka & Jidnyasa 2K24</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+ body{
+    background-image: url(./Images/dark_theme.png);
+     background-position: center center;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+#navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25%;
+            margin: 0;
+            background-color: #131313;
+            height: 100vh;
+            display: none;
+            z-index: 5;
+        }
+
+        #navitems {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        hr {
+            color: red;
+            margin-top: 7%;
+        }
+
+        #menu {
+            display: inline;
+            padding: 2px;
+            border-radius: 20px;
+            position: fixed;
+        }
+
+        #menu img {
+            margin: 25%;
+            padding: 25%;
+            background-color: #131313;
+            border: 2px solid #00FFFF;
+            border-radius: 20px;
+
+        }
+
+        .close-button {
+            cursor: pointer;
+            width: 20%;
+            padding: 0;
+            background-color: #131313;
+            width: 50px;
+            margin: 2%;
+        }
+
+        .close-button:hover {
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+
+        .navitem {
+            display: flex;
+            align-items: center;
+            border-top: 0.1px solid #00FFFF;
+            border-bottom: 1px solid white;
+            height: 10vh;
+            width: 100%;
+        }
+
+        .navitem:hover {
+            box-shadow: #00FFFF 2px 2px 10px;
+            font-weight: 700;
+            transform: scale(1.02);
+            transition: 0.2s;
+
+            /* img {
+                transform: rotateY(360deg);
+                transition: 1.5s;
+            } */
+        }
+
+        .navitem a {
+            text-decoration: none;
+            font-size: 4vh;
+            color: #00FFFF;
+            margin-left: 10px;
+        }
+
+        .navimg {
+            width: 15%;
+        }
+
+        @media (max-width:600px) {
+            #navbar {
+                width: 99%;
+            }
+
+            .navimg {
+                width: 40px;
+            }
+
+            .navitem {
+                height: 9vh;
+
+            }
+
+            .navitem a {
+                font-size: 3.3vh;
+
+            }
+
+        }
+
+        #navbar {
+    z-index: 50;
+}
+
+.copyright{
+
+color: white;
+font-size: 1.5rem;
+
+}
+
+
+
+@media (max-width: 600px) {
+
+
+    #navbar {
+        width: 100%;
+    }
+
+    .navitem {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navitem a {
+        font-size: 3.3vh;
+    }
+
+    .navimg {
+        width: 40px;
+    }
+    .copyright{
+
+
+font-size: 1rem;
+
+}
+
+}
+
+
+        /* .galcontainer div{
+            background-image: url(./Images/wallhaven-qz5okd_1920x1080.png);
+        }
+        .galcontainer{
+            display: grid;
+            gap: 20px;
+            grid-template-columns:  1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(40,1fr);
+            background-color:transparent;
+            margin: 2% ;
+            margin-top: 0;
+        }
+
+        div div{
+            box-shadow: 4px 4px 8px black;
+            display: flex;
+            flex-direction: column;
+            opacity: 0.9;
+            justify-content: flex-end;
+        }
+
+        .galcontainer div:hover{
+            opacity: 1;
+            filter: brightness(120%);
+            transform: scale(1.05 );
+            transition: 0.8s;
+        }
+
+        .galcontainer div p{
+                background:linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);;
+                margin: 0;
+                height: auto;
+                font-size: 1.4rem;
+        }
+        .galitem1,.galitem6,.galitem11{
+             grid-row: span 8;
+             /* height: 270px; */
+             
+        /* } */
+        .galitem2,.galitem4,.galitem8,.galitem10,.galitem14{
+            grid-row: span 24;
+            /* height: 600px; */
+        }
+
+       .galitem3,.galitem5,.galitem7,.galitem9,.galitem12,.galitem13{
+         grid-row: span 16;
+         /* height: 415px; */
+       }
+
+       .galitem7{
+        grid-column: span 4;
+       }
+
+       .heading{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+       }
+       .heading *{
+        /* font-size: xx-large;
+         */
+         font-size: 2.5rem;
+         color: #00FFFF;
+        /* margin: 0.5rem; */
+        text-decoration: underline;
+       }
+
+       @media (max-width:768px){
+        .galcontainer{
+           display: flex;
+           flex-direction: column;
+           height: auto;
+           align-items: center;
+           margin: auto;
+        }
+        .galcontainer div{
+            height: 50vh;
+            width: 90%;
+        }
+       }
+
+       
+       #developed_by {
+            width: 100%;
+            height: 10vh;
+            background-color: #131313;
+            color: #ffffff;
+            display: flex;
+            text-align: center;
+            font-family: 'quivira.otf';
+            font-size: 1.2rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+            /* border: 2px solid green; */
+            position:absolute;
+            left: 0;
+       
+        }
+
+        #developed_by p{
+            margin: 0;
+        } */
+
+        /* gallery start */
+        * {
+  box-sizing: border-box;
+}
+
+
+
+.title {
+  text-align: center;
+  font-family: 'Oswald';
+  font-weight: 100;
+  font-size: 3.75rem;
+  letter-spacing: 5px;
+  background: linear-gradient(rgba(255, 0, 0, 0), #444, rgba(255, 0, 0, 0));
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 37.5em) {
+  .title {
+    font-size: 4.75rem;
+  }
+}
+
+p {
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-family: 'oswald';
+  font-size: 1.25rem;
+  color: #444;
+  font-weight: 100;
+  width: 90%;
+}
+
+@media screen and (min-width: 37.5em) {
+  p {
+    height: 70%;
+  }
+}
+
+.case-study-gallery {
+  margin-top: 50px;
+  width: 90%;
+  margin: 50px auto;
+  max-width: 1100px;
+}
+
+.case-study {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 250px;
+  margin: 0 auto 2rem;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, .5);
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+@media screen and (min-width: 37.5em) {
+  .case-study {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  .case-study {
+    display: inline-block;
+    width: 45%;
+    margin-left: 25px;
+  }
+}
+
+.case-study__img {
+  width: 90%;
+  display: block;
+  margin-top: 50%;
+  transform: translateY(50%);
+  margin: 0 auto;
+}
+
+.case-study__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.case-study__overlay:after {
+  content: '';
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background-color: #202020;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  left: 0;
+  transition: all .3s ease;
+}
+
+.case-study__title {
+  position: relative;
+  top: -200px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 2.25rem;
+  font-family: 'Oswald';
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  letter-spacing: 5px;
+  transition: all .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+
+.case-study__link {
+  position: relative;
+  display: block;
+  width: 60%;
+  top: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: 'Oswald';
+  color: white;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 1.25em;
+  transition: all .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+
+.case-study__link:hover {
+  background-color: white;
+  color: #202020;
+}
+
+.case-study:hover .case-study__title {
+  top: 0;
+}
+
+.case-study:hover .case-study__link {
+  top: 0;
+}
+
+.case-study:hover .case-study__overlay:after {
+  opacity: .75;
+}
+
+.study1 {
+  background-image: url('/Images/g1.jpg');
+}
+
+.study2 {
+  background-image: url('/Images/g2.jpg');
+}
+
+.study3 {
+  background-image: url('/Images/g3.jpg');
+}
+
+.study4 {
+  background-image: url('/Images/g4.jpg');
+}
+
+.study5 {
+  background-image: url('/Images/g5.jpg');
+}
+
+.study6 {
+  background-image: url('/Images/g6.jpg');
+}
+
+#titleg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00FFFF;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+
+        /* gallery End */
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul id="navitems">
+            <label for="closeButton">
+                <div class="close-button" id="closeButton"><img src="./Images/closebtn.png" alt="" width="50px"></div>
+            </label>
+            <div id="navitem1" class="navitem">
+              <img src="./Images/home.png" alt="homeimg" class="navimg">
+              <li><a href="/" class="a">Home</a></li>
+          </div>
+          <div id="navitem2" class="navitem">
+              <img src="./Images/calendar.png" alt="" class="navimg">
+              <li><a href="/event" class="a">Events</a></li>
+          </div>
+          <div id="navitem2" class="navitem">
+              <img src="./Images/information.png" alt="" class="navimg">
+              <li><a href="/about" class="a">About Us</a></li>
+          </div>
+          <div id="navitem4" class="navitem">
+              <img src="./Images/gallery.png" class="navimg">
+              <li><a href="/gallery" class="a">Gallery</a></li>
+          </div>
+          <div id="navitem5" class="navitem">
+              <img src="./Images/register.png" alt="" class="navimg">
+              <li><a href="/register" class="a" target="_blank">Register</a></li>
+            </div>
+            <div>
+                <li><a href="" id="navitem6" class="a"></a></li>
+            </div>
+        </ul>
+    </nav>
+    <div id="menu" style="z-index: 1;">
+        <img src="./Images/list.png" alt="Imgae">
+    </div>
+
+    <div id="titleg">
+        <h1>GALLERY</h1>
+    </div>
+
+    <div class="case-study-gallery">
+        
+      <div class="case-study study1">
+      
+        
+      </div>
+        
+      <div class="case-study study2">
+          
+       
+      </div>
+        
+      <div class="case-study study3">
+          
+        
+      </div>
+        
+      <div class="case-study study4">
+          
+        
+      </div>
+        
+      <div class="case-study study5">
+          
+        
+      </div>
+        
+      <div class="case-study study6">
+
+      </div>
+
+      </div>
+
+
+
+    <!-- <div class="heading">
+        <h1>
+            Photo
+        </h2>
+        <p>
+            Gallery
+        </p>
+    </div>
+    <div class="galcontainer">
+        <div class="galitem1" ><p>Name</p></div>
+        <div class="galitem2"><p>Name</p></div>
+        <div class="galitem3"><p>Name</p></div>
+        <div class="galitem4"><p>Name</p></div>
+        <div class="galitem5"><p>Name</p></div>
+        <div class="galitem6"><p>Name</p></div>
+        <div class="galitem7"><p>Name</p></div>
+        <div class="galitem8"><p>Name</p></div>
+        <div class="galitem9"><p>Name</p></div>
+        <div class="galitem10"><p>Name</p></div>
+        <div class="galitem11"><p>Name</p></div>
+        <div class="galitem12"><p>Name</p></div>
+        <div class="galitem13"><p>Name</p></div>
+        <div class="galitem14"><p>Name</p></div>
+        <!-- <div class="galitem15">15</div>
+        <div class="galitem16">16</div>
+        <div class="galitem17">17</div>
+        <div class="galitem18">18</div>
+        <div class="galitem19">19</div>
+        <div class="galitem20">20</div> -->
+    </div>
+      -->
+
+
+      <footer id="developed_by">
+        <p>© 2024 TKIET CSE Student . All Rights Reserved. Designed &amp; Developed with ♥ by <a href="https://www.linkedin.com/in/ritesh-bongarde-16575a236/" style="color:white"> Ritesh Bongarde</a> &amp; <a href="https://www.linkedin.com/in/pratik-patil-a56000209/" style="color:white">Pratik Patil</a></p>
+    </footer>
+
+
+    <script>
+        // Get references to the navbar, menu, and close button elements
+        const navbar = document.getElementById('navbar');
+        const menu = document.getElementById('menu');
+        const closeButton = document.getElementById('closeButton');
+
+        // Function to toggle navbar visibility
+        function toggleNavbar() {
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+                navbar.
+                    menu.style.display = 'none';
+            } else {
+                navbar.style.display = 'none';
+                menu.style.display = 'block';
+            }
+        }
+
+        // Add an event listener to the menu to toggle navbar visibility
+        menu.addEventListener('click', toggleNavbar);
+
+        // Add an event listener to the close button to hide the navbar
+        closeButton.addEventListener('click', toggleNavbar);
+
+
+        // Reveal Element
+        window.addEventListener('scroll', reveal)
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        // Code for Navigation bar click
+
+        const navItems = document.querySelectorAll('.navitem');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                const link = this.querySelector('a');
+
+                if (link) {
+                    event.preventDefault();
+                    
+                    const href = link.getAttribute('href');
+                    
+                    window.location.href = href;
+                }
+            });
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

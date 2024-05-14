@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section .trees{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+
+section .girl{
+    position: absolute;
+    scale: 0.65;
+    pointer-events: none;
+    /* animation: animateGirl 10s linear 0 infinite; */
+    animation-name: animateGirl;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+@keyframes animateGirl 
+{
+    0%
+    {
+        transform: translateX(calc(100% + 100vw));
+    }
+    50%
+    {
+        transform: translateX(calc(-100% - 100vw));
+    }
+    50.01%
+    {
+        transform: translateX(calc(-100% - 100vw))
+        rotateY(180deg);
+    }
+    100%
+    {
+        transform: translateX(calc(100% + 100vw))
+        rotateY(180deg);
+    }
+}
+section .login{
+    position: relative;
+    /* display: flex; */
+    padding: 60px;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+section .login h2{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #8f2c24;
+    margin-bottom: 10px;
+}
+section .login .inputBox{
+    position: relative;
+}
+section .login .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    font-size: 1.25em;
+    color: #8f2c24;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    /* margin-bottom: 10px; */
+}
+section .login .inputBox ::placeholder{
+    color: #8f2c24;
+}
+section .login .inputBox #button{
+    position: relative;
+    border: none;
+    outline: none;
+    background: #8f2c24;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 500;
+    transition: 0.5s;
+}
+section .login .inputBox #button:hover{
+    background: #d64c42;
+}
+section .login .group{
+    display: flex;
+    justify-content: space-between;
+}
+section .login .group a{
+    text-decoration: none;
+    font-size: 1.25em;
+    color: #8f2c24;
+    font-weight: 500;
+}
+section .login .group a:nth-child(2)
+{
+    text-decoration: underline;
+}
+section .leaves{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+section .leaves .set{
+    position: absolute;
+    /* inset: 0; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+section .leaves .set div{
+    position: absolute;
+    display: block;
+}
+section .leaves .set div:nth-child(1)
+{
+    left: 20%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(2)
+{
+    left: 50%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(3)
+{
+    left: 70%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(4)
+{
+    left: 5%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(5)
+{
+    left: 85%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(6)
+{
+    left: 90%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(7)
+{
+    left: 15%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+section .leaves .set div:nth-child(8)
+{
+    left: 60%;
+    /* z-index: 100; */
+    animation-name: animateLeaves;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+@keyframes animateLeaves {
+    0%
+    {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    20%
+    {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%
+    {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%
+    {
+        transform: translateX(20px) rotate(180deg);
+    }
+    80%
+    {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    100%
+    {
+        top: 110%;
+        transform: translateX(20px) rotate(255deg);
+    }
+}
