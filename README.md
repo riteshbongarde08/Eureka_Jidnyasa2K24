@@ -24,7 +24,6 @@ The event is organized on April 20, 2024. Due to this website, the college has s
 - **Event Registration:** Easy-to-use forms for registering in different events.
 - **Database Management:** Stores participant details and uploads securely.
 - **Responsive Design:** Ensures the website works well on all devices.
-- 
 
 ## Technologies Used
 
