@@ -1,61 +1,39 @@
-This project is a College National Event Website. It serves as a platform for event registration.
+# College National Event Registration Website
 
-// created by : Ritesh Bongarde.
-// E-mail: riteshbongarde08@gmail.com
-// Contact: +91 9148021820
-// git-hub: https://github.com/riteshbongarde08/Eureka_Jidnyasa2K24/new
+This project is a comprehensive web application designed to facilitate registration for college events, specifically Eureka and Jidnyasa. The website provides a seamless interface for participants to register for various events, offering a user-friendly experience with modern web technologies.
 
-Technologies Used
-HTML
-CSS
-JavaScript
-Bootstrap
-Node.js
-Express.js
-PostgreSQL
-Installation
-To run this project locally, you'll need to have the following installed:
+## Project Description
 
-Node.js
-PostgreSQL
-Follow these steps to get the project up and running:
+This website is designed to manage and streamline the registration process for college events like Eureka and Jidnyasa. It allows participants to register, providing necessary details and uploading relevant documents. The system categorizes registrations based on the selected event and department, making it easier to manage and review the entries.
 
-Clone this repository to your local machine using:
+### Eureka
 
-bash
-Copy code
-git clone <repository-url>
-Navigate to the project directory:
+Eureka is a Paper Presentation Competition where participants present their papers on given subjects. Winners are determined based on the quality of their paper and presentation skills.
 
-bash
-Copy code
-cd <project-directory>
-Install dependencies using npm:
+### Jidnyasa
 
-Copy code
-npm install
-Set up the PostgreSQL database:
+Jidnyasa is another significant event, focusing on different themes and activities, promoting creativity, technology, and learning. Participants showcase their skills and knowledge in various domains.
 
-Create a new database.
-Execute the SQL scripts provided in the database folder to create the necessary tables and seed data.
-Configure the database connection:
+### Event Date
+
+The event is organized on April 20, 2024. Due to this website, the college has seen an increase in registration and participation. Colleges from distant locations can now easily access all the information and register through this platform. As a result, there was a notable increase in the participation of students from other colleges in 2024 compared to previous years. This website has proven to be very helpful for our TKIET Warnanagar College.
 
 
-To start the server, run:
+## Features
 
-sql
-Copy code
-npm start
-or using nodemon:
+- **Event Registration:** Easy-to-use forms for registering in different events.
+- **Database Management:** Stores participant details and uploads securely.
+- **Responsive Design:** Ensures the website works well on all devices.
+- 
 
-Copy code
-npx nodemon
-Once the server is running, you can access the project in your web browser at:
+## Technologies Used
 
-arduino
-Copy code
-http://localhost:3000
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Backend:** Node.js, Express.js
+- **Database:** PostgreSQL
+- **Version Control:** Git
 
-License
-This project is licensed under the TKIET License.
- 
+## Hosting
+
+The project is hosted on a college server with the domain: `http://43.241.25.82:3000`.
+
