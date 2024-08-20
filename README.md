@@ -2,6 +2,8 @@
 
 This project is a comprehensive web application designed to facilitate registration for college events, specifically Eureka and Jidnyasa. The website provides a seamless interface for participants to register for various events, offering a user-friendly experience with modern web technologies.
 
+<a href="https://eurekajidnyasa.netlify.app/" >Click here for live Website</a>
+
 ## Project Description
 
 This website is designed to manage and streamline the registration process for college events like Eureka and Jidnyasa. It allows participants to register, providing necessary details and uploading relevant documents. The system categorizes registrations based on the selected event and department, making it easier to manage and review the entries.
